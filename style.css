@@ -1,7 +1,61 @@
+:root {
+    --custom-red: hsl(0, 84%, 44%);
+    --custom-red-hover: hsl(0, 84%, 49%);
+    --custom-gray: #212529;
+    --color-tertiary: #7f7f90;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+
+#Home:target~#home-link,
+body:not(:has(:target)) #home-link {
+    color: black;
+}
+
+#Home:target~#home-link,
+body:not(:has(:target)) #home-link::after {
+    width: 100%;
+}
+
+body:has(#Home:target) #home-link {
+    color: black;
+}
+
+body:has(#Home:target) #home-link::after {
+    width: 100%;
+}
+
+body:has(#Chefs:target) #Chefs-link {
+    color: black;
+}
+
+body:has(#Chefs:target) #Chefs-link::after {
+    width: 100%;
+}
+
+body:has(#Gallery:target) #Gallery-link {
+    color: black;
+}
+
+body:has(#Gallery:target) #Gallery-link::after {
+    width: 100%;
+}
+
+body:has(#Contact:target) #Contact-link {
+    color: black;
+}
+
+body:has(#Contact:target) #Contact-link::after {
+    width: 100%;
+}
+
+.custom-gray {
+    color: #212529;
 }
 
 
@@ -19,7 +73,7 @@ nav h1 {
 
 nav h1::after {
     content: '.';
-    color: red;
+    color: var(--custom-red);
 }
 
 nav a {
@@ -45,7 +99,7 @@ nav .container {
 }
 
 nav {
-    box-shadow: 1px 1px 5px 2px #c6c1c1;
+    box-shadow: 1px 1px 5px 2px #dbdada;
     background-color: white;
 }
 
@@ -57,39 +111,334 @@ nav {
     align-content: center;
 }
 
-nav button{
+nav button {
     background: transparent;
     border: 0;
     outline: 0;
     cursor: pointer;
 }
 
-.position-fixed{
+.position-fixed {
     position: fixed;
     width: 100%;
     z-index: 9999;
     top: 0;
 }
 
-header{
+header {
     height: 100vh;
     background-color: #eee;
+    overflow: auto;
 }
 
-header .container{
+header .container {
     padding-top: 5.7rem;
     height: 100%;
     width: 85%;
 }
 
-.w-40{
+.w-40 {
     width: 40%;
 }
 
-header h2{
+header h2 {
     font-size: 4.0625rem;
 }
 
-.w-100{
+.w-100 {
     width: 100%;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+header p {
+    padding: 20px 0;
+    line-height: 1.7;
+}
+
+header button {
+    border: 0;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.book-btn {
+    background: var(--custom-red);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0px 15px 15px 15px;
+}
+
+.book-btn:hover {
+    background-color: var(--custom-red-hover);
+}
+
+
+.w-25 {
+    width: 25%;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.fs-25 {
+    font-size: 25px;
+}
+
+.fa-play {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    background: white;
+    font-size: 17px;
+    align-content: center;
+}
+
+.mx-2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.video-btn {
+    font-weight: 600;
+}
+
+.video-btn:hover {
+    color: var(--custom-red);
+}
+
+.w-32 {
+    width: 32%;
+}
+
+#Chefs .w-32 img {
+    width: 100%;
+}
+
+#Chefs {
+    width: 85%;
+    margin: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.color-red {
+    color: var(--custom-red);
+}
+
+.ff-Inter {
+    font-family: "Inter", sans-serif;
+}
+
+#Chefs h2 {
+    font-size: 3.125rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+#Chefs .h1 {
+    font-size: 1rem;
+    color: var(--color-tertiary);
+}
+
+.my-5 {
+    margin-top: 5.5rem !important;
+    margin-bottom: 5.5rem !important;
+}
+
+.chef-div {
+    box-shadow: 0px 3px 8px 1px #d0cfcf;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.chef-div:hover {
+    transform: scale(1.06);
+}
+
+.chef-div .description {
+    font-style: italic;
+    color: var(--color-tertiary);
+    font-size: 0.9375rem;
+}
+
+.chef-div .content {
+    padding: 1.5625rem;
+    padding-top: 0.625rem;
+}
+
+.chef-div .job {
+    color: var(--color-tertiary);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.875rem;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.chef-div .icons {
+    top: 10px;
+    transform: translateX(100px);
+    flex-direction: column;
+    right: 0;
+    padding: 10px 20px;
+    background: #ffffff57;
+    border-radius: 7px;
+    margin: 8px;
+    transition: all 0.2s 0.3s ease-in-out;
+}
+
+.chef-div:hover .icons {
+    transform: translateX(0);
+}
+
+.icons i,
+a {
+    color: rgb(117, 117, 117);
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.chef-div .wave {
+    bottom: 0;
+    width: 100%;
+}
+
+svg {
+    display: block;
+}
+
+nav li {
+    position: relative;
+    color: var(--color-tertiary);
+}
+
+nav li::after {
+    content: '';
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--custom-red);
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+
+#Gallery h2 {
+    font-size: 3.125rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+#Gallery .h1 {
+    font-size: 1rem;
+    color: var(--color-tertiary);
+}
+
+#Gallery {
+    background-color: rgb(230, 230, 230);
+    padding-top:3px;
+    padding-bottom:3px;
+}
+
+.w-85 {
+    width: 85%;
+    margin: auto;
+}
+
+#Gallery .container {
+    display: grid;
+    grid-template-areas:
+        "item1 item3 item5"
+        "item2 item3 item6"
+        "item2 item4 item7";
+    gap: 15px;
+}
+
+#Gallery .container .position-relative {
+    overflow: hidden;
+}
+
+#Gallery .container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#Gallery .position-relative .position-absolute {
+    top: 100%;
+    background-color: #090909b4;
+    transition: all 0.5s ease-in-out;
+}
+
+#Gallery .position-relative:hover .position-absolute {
+    top: 0;
+    background-color: #090909b4;
+}
+
+#Gallery .position-relative img {
+    transition: all 0.5s ease-in-out;
+}
+
+#Gallery .position-relative:hover img {
+    transform: scale(1.2);
+}
+
+#Gallery .position-relative {
+    border: 6px solid white;
+    border-radius: 3px;
+}
+
+#item1 {
+    grid-area: item1;
+}
+
+#item2 {
+    grid-area: item2;
+}
+
+#item3 {
+    grid-area: item3;
+}
+
+#item4 {
+    grid-area: item4;
+}
+
+#item5 {
+    grid-area: item5;
+}
+
+#item6 {
+    grid-area: item6;
+}
+
+#item7 {
+    grid-area: item7;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.text-white {
+    color: white;
 }

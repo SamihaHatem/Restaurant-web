@@ -13,6 +13,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -25,35 +30,37 @@
                     <h1 class="open-sans">Mealify</h1>
                 </a>
             </div>
-            <div class="align-content-center">
-                <ul class="d-flex open-sans">
-                    <li>Home</li>
-                    <li>Chefs </li>
-                    <li>Gallery</li>
-                    <li> Contact</li>
+            <div class="align-content-center w-25">
+                <ul class="d-flex open-sans w-100 justify-content-around">
+                    <li id="home-link"><a href="#Home">Home</a></li>
+                    <li id="Chefs-link"><a href="#Chefs">Chefs</a></li>
+                    <li id="Gallery-link"><a href="#Gallery">Gallery</a></li>
+                    <li id="Contact-link"><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
 
             <div class="align-content-center">
                 <button>
-                    <i class="fa-solid fa-moon"></i>
+                    <i class="fa-solid fa-moon fs-25"></i>
                 </button>
             </div>
         </div>
     </nav>
 
-    <header>
-        <div class="container d-flex justify-content-between m-auto">
+    <header id="Home">
+        <div class="container d-flex justify-content-between m-auto align-items-center">
             <div class="w-40">
-                <h2 class="amatic-sc">
+                <h2 class="amatic-sc custom-gray">
                     Enjoy Your Healthy
                     Delicious Food
                 </h2>
-                <p>Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet. Eum quas beatae cumque eum
+                <p class="open-sans custom-gray">Sed autem laudantium dolores. Voluptatem itaque ea consequatur eveniet.
+                    Eum quas
+                    beatae cumque eum
                     quaerat.</p>
                 <div>
-                    <button>Book a Table</button>
-                    <button>Watch a Video</button>
+                    <button class="book-btn">Book a Table</button>
+                    <button class="mx-2 video-btn"><i class="fa-solid fa-play"></i> Watch a Video</button>
                 </div>
             </div>
             <div class="w-40">
@@ -61,6 +68,154 @@
             </div>
         </div>
     </header>
+
+    <section id="Chefs" class="my-5">
+        <p class="text-center ff-Inter h1">CHEFS</p>
+        <h2 class="text-center amatic-sc">Our <span class="color-red">Proffesional</span> Chefs</h2>
+
+        <div class="d-flex justify-content-between">
+            <div class="w-32 chef-div">
+                <div class="position-relative">
+                    <img src="./images/chefs-1.jpg" alt="chef">
+                    <div class="position-absolute wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,160L20,165.3C40,171,80,181,120,197.3C160,213,200,235,240,234.7C280,235,320,213,360,213.3C400,213,440,235,480,218.7C520,203,560,149,600,133.3C640,117,680,139,720,170.7C760,203,800,245,840,256C880,267,920,245,960,213.3C1000,181,1040,139,1080,144C1120,149,1160,203,1200,202.7C1240,203,1280,149,1320,138.7C1360,128,1400,160,1420,176L1440,192L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="position-absolute d-flex icons">
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="content text-center">
+                    <h3 class="ff-Inter">Walter White</h3>
+                    <p class="open-sans job">Master Chef</p>
+                    <p class="open-sans description">Velit aut quia fugit et et. Dolorum ea voluptate vel tempore
+                        tenetur ipsa quae aut. Ipsum
+                        exercitationem iure minima enim corporis et voluptate.</p>
+                </div>
+            </div>
+
+            <div class="w-32 chef-div">
+                <div class="position-relative">
+                    <img src="./images/chefs-2.jpg" alt="chef">
+                    <div class="position-absolute wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,160L20,165.3C40,171,80,181,120,197.3C160,213,200,235,240,234.7C280,235,320,213,360,213.3C400,213,440,235,480,218.7C520,203,560,149,600,133.3C640,117,680,139,720,170.7C760,203,800,245,840,256C880,267,920,245,960,213.3C1000,181,1040,139,1080,144C1120,149,1160,203,1200,202.7C1240,203,1280,149,1320,138.7C1360,128,1400,160,1420,176L1440,192L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="position-absolute d-flex icons">
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                <div class="content text-center">
+                    <h3 class="ff-Inter">Sarah Jhonson</h3>
+                    <p class="open-sans job">Patissier</p>
+                    <p class="open-sans description">Quo esse repellendus quia id. Est eum et accusantium pariatur fugit
+                        nihil minima suscipit
+                        corporis. Voluptate sed quas reiciendis animi neque sapiente.</p>
+                </div>
+            </div>
+
+            <div class="w-32 chef-div">
+                <div class="position-relative">
+                    <img src="./images/chefs-3.jpg" alt="chef">
+                    <div class="position-absolute wave">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,160L20,165.3C40,171,80,181,120,197.3C160,213,200,235,240,234.7C280,235,320,213,360,213.3C400,213,440,235,480,218.7C520,203,560,149,600,133.3C640,117,680,139,720,170.7C760,203,800,245,840,256C880,267,920,245,960,213.3C1000,181,1040,139,1080,144C1120,149,1160,203,1200,202.7C1240,203,1280,149,1320,138.7C1360,128,1400,160,1420,176L1440,192L1440,320L1420,320C1400,320,1360,320,1320,320C1280,320,1240,320,1200,320C1160,320,1120,320,1080,320C1040,320,1000,320,960,320C920,320,880,320,840,320C800,320,760,320,720,320C680,320,640,320,600,320C560,320,520,320,480,320C440,320,400,320,360,320C320,320,280,320,240,320C200,320,160,320,120,320C80,320,40,320,20,320L0,320Z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="position-absolute d-flex icons">
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+
+                    </div>
+                </div>
+                <div class="content text-center">
+                    <h3 class="ff-Inter">William Anderson</h3>
+                    <p class="open-sans job">Cook</p>
+                    <p class="open-sans description">Vero omnis enim consequatur. Voluptas consectetur unde qui
+                        molestiae deserunt. Voluptates enim
+                        aut architecto porro aspernatur molestiae modi.</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section id="Gallery" class="w-100">
+        <div class="my-5 w-85">
+            <p class="text-center ff-Inter h1">Gallery</p>
+            <h2 class="text-center amatic-sc">Check <span class="color-red">Our Gallery</span></h2>
+
+            <div class="container">
+                <div id="item1" class="position-relative">
+                    <img src="./images/meal-1.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item2" class="position-relative">
+                    <img src="./images/meal-4.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item3" class="position-relative">
+                    <img src="./images/meal-2.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item4" class="position-relative">
+                    <img src="./images/meal-7.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item5" class="position-relative">
+                    <img src="./images/meal-3.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item6" class="position-relative">
+                    <img src="./images/meal-5.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+                <div id="item7" class="position-relative">
+                    <img src="./images/meal-6.jpg" alt="">
+                    <div class="position-absolute w-100 h-100 align-content-center">
+                        <h3 class="text-white ff-Inter text-center">Pizza</h3>
+                        <p class="text-white ff-Inter text-center">Hawaiian pizza with ham and pineapple</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script src="https://kit.fontawesome.com/0279d0bd8f.js" crossorigin="anonymous"></script>
 </body>
