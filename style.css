@@ -61,6 +61,7 @@ body:has(#Contact:target) #Contact-link::after {
 
 .d-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .justify-content-between {
@@ -135,10 +136,6 @@ header .container {
     padding-top: 5.7rem;
     height: 100%;
     width: 85%;
-}
-
-.w-40 {
-    width: 40%;
 }
 
 header h2 {
@@ -324,6 +321,7 @@ svg {
 nav li {
     position: relative;
     color: var(--color-tertiary);
+    transition: color 0.3s ease-in-out;
 }
 
 nav li::after {
@@ -341,6 +339,11 @@ nav li:hover::after {
     width: 100%;
 }
 
+nav li:hover {
+    color: black;
+}
+
+
 
 #Gallery h2 {
     font-size: 3.125rem;
@@ -355,8 +358,8 @@ nav li:hover::after {
 
 #Gallery {
     background-color: rgb(230, 230, 230);
-    padding-top:3px;
-    padding-bottom:3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 }
 
 .w-85 {
@@ -441,4 +444,50 @@ nav li:hover::after {
 
 .text-white {
     color: white;
+}
+
+header img {
+    filter: drop-shadow(0px 7px 4px gray);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .sm-w-100 {
+        width: 100%;
+    }
+    .sm-col-reverse{
+        flex-direction: column-reverse;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .md-w-100 {
+        width: 100%;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .lg-w-40 {
+        width: 40% !important;
+    }
 }
